@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner {
+    position: relative;
+    background: url("background.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.banner .clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner .clouds img {
+    bottom: 0;
+    position: absolute;
+    max-width: 100%;
+    animation: movingClouds calc(8s * var(--i)) linear infinite;
+}
+
+@keyframes movingClouds{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+section {
+    padding: 40px 60px;
+}
+
+section p {
+    margin-top: 20px;
+}
+
+section h2 {
+    font-size: 40px;
+    font-weight: 800;
+}
