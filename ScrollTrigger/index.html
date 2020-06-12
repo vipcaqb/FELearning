@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h2>Scroll to begin</h2>
+    </section>
+    <div class="box">
+        <h2 class="text1"> Scroll trigger is awesome</h2>
+        <h2 class="text2"> This is my first code</h2>
+        <h2 class="text3"> How it is ?</h2>
+        <div class="logo">
+            Xcode
+        </div>
+    </div>
+
+    
+    <div class="box2">
+        <h2 class="text1"> Stay tuned</h2>
+        <h2 class="text2"> For more videos</h2>
+        <h2 class="text3"> Thank for watching :)</h2>
+        <div class="logo">
+            Xcode
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".box",
+                start:"center center",
+                end:"bottom top",
+                markers : true,
+                scrub : true,
+                pin : true
+            }
+        }).from(".text1",{x:innerWidth * 1})
+        .from(".text2",{x:innerWidth * -1})
+        .from(".text3",{x:innerWidth * 1})
+        .from(".logo",{y:innerHeight * -1, rotate : 360});
+    </script>
+</body>
+</html>
